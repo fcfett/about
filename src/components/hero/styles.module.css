@@ -1,0 +1,17 @@
+.hero-toggle {
+  @apply flex w-6 h-6;
+}
+
+.hero-toggle:checked ~ * {
+  .first-name {
+    @apply grow-0 shrink w-0 opacity-0 mr-0;
+  }
+}
+
+.name {
+  @apply flex flex-1 justify-around text-[14vmin];
+}
+
+.first-name {
+  @apply font-light mr-[0.2em] transition-all;
+}

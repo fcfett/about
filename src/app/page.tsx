@@ -2,8 +2,10 @@ import Hero from '@/components/hero'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Hero />
+    <main className="absolute inset-0 flex overflow-hidden p-4">
+      <div className="relative flex flex-1 flex-col items-center justify-center">
+        <Hero />
+      </div>
     </main>
   )
 }

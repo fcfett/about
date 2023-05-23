@@ -8,6 +8,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:tailwindcss/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],

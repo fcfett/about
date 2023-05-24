@@ -34,22 +34,28 @@ export default function Hero() {
     <>
       <input id={TOGGLE_ID} type="checkbox" className={styles['hero-toggle']} />
 
-      <section className="relative flex w-full max-w-4xl flex-col">
+      <section className="relative flex w-full max-w-5xl flex-col">
         <h1>
-          <label
-            className="relative flex items-center text-[14vmin]"
-            htmlFor={TOGGLE_ID}
-          >
-            <span className={classNames(styles.name, styles['first-name'])}>
+          <label className={styles['hero-label']} htmlFor={TOGGLE_ID}>
+            <span
+              title={firstName}
+              className={classNames(styles.name, styles['first-name'])}
+            >
               {breakTextToSpans(`${firstName} `, 'first-name')}
             </span>{' '}
-            <strong className={classNames(styles.name, styles['last-name'])}>
+            <strong
+              title={lastName}
+              className={classNames(styles.name, styles['last-name'])}
+            >
               {breakTextToSpans(lastName, 'last-name')}
             </strong>
           </label>
         </h1>
 
-        <h2 className="flex w-full justify-between px-[8vmin] font-sans text-[3.5vmin] font-light uppercase">
+        <h2
+          title={generalistTitle}
+          className="flex w-full justify-between px-[8vmin] font-sans text-[3vmin] font-light uppercase"
+        >
           {breakTextToSpans(generalistTitle, 'generalist-title')}
         </h2>
 

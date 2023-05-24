@@ -2,6 +2,10 @@
   @apply flex w-6 h-6 absolute opacity-0;
 }
 
+.hero-label {
+  @apply relative flex cursor-pointer items-center text-[14vmin] transition-all duration-300;
+}
+
 .name {
   @apply flex flex-auto shrink-0 justify-center font-serif transition-all duration-300 ease-out;
 }
@@ -15,14 +19,14 @@
 }
 
 .image {
-  @apply absolute bottom-0;
+  @apply absolute bottom-4;
 
   &:first-of-type {
-    @apply left-0 -translate-x-[200%] -rotate-180;
+    @apply left-4 -translate-x-[200%] -rotate-180;
   }
 
   &:last-of-type {
-    @apply right-0 translate-x-[200%] rotate-180;
+    @apply right-4 translate-x-[200%] rotate-180;
   }
 }
 
@@ -53,4 +57,9 @@
   &.image {
     @apply translate-x-0 first-of-type:-rotate-6 last-of-type:rotate-6;
   }
+}
+
+.hero-label:hover,
+.hero-toggle:focus-within ~ * .hero-label {
+  @apply -translate-y-[1vmin] shadow-yellow-600 drop-shadow-[0_4px_2px_var(--tw-shadow-color)];
 }

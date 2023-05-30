@@ -1,5 +1,5 @@
 .round-frame-image {
-  @apply flex w-[25vmin] h-[25vmin] max-w-[12rem] max-h-[12rem] rounded-full overflow-hidden;
+  @apply relative flex w-[25vmin] h-[25vmin] max-w-[12rem] max-h-[12rem] rounded-full overflow-hidden;
 
   &:before,
   &:after {
@@ -7,7 +7,7 @@
   }
 
   &:before {
-    @apply bg-white scale-95 -z-10;
+    @apply bg-white -z-10;
   }
 
   &:after {
@@ -15,6 +15,7 @@
   }
 }
 
-.next-image {
-  @apply scale-95;
+.next-image,
+.round-frame-image:before {
+  @apply scale-[0.98];
 }

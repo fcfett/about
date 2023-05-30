@@ -4,10 +4,15 @@
 
 .hero-label {
   @apply relative flex cursor-pointer items-center text-[14vmin] transition-all duration-300;
+  @apply visited:text-lime-500;
 }
 
 .name {
-  @apply flex flex-auto shrink-0 justify-center font-serif transition-all duration-300 ease-out;
+  @apply flex flex-auto shrink-0 justify-center font-serif;
+}
+
+.first-name {
+  @apply transition-all duration-300 ease-out;
 }
 
 .last-name {
@@ -37,16 +42,14 @@
 
 .hero-toggle:checked ~ * {
   .first-name {
-    @apply grow-0 shrink w-0 opacity-0;
+    @apply grow-0 shrink w-0 opacity-0 -translate-x-1/2;
   }
 
-  @media screen(md) {
-    .last-name {
-      @apply justify-between mx-[8vmin];
+  .last-name {
+    @apply justify-between;
 
-      & > span {
-        @apply grow-0;
-      }
+    & > span {
+      @apply grow-0;
     }
   }
 
@@ -62,4 +65,25 @@
 .hero-label:hover,
 .hero-toggle:focus-within ~ * .hero-label {
   @apply -translate-y-[1vmin] shadow-yellow-600 drop-shadow-[0_4px_2px_var(--tw-shadow-color)];
+}
+
+.click-me {
+  animation: bounce-in 1s ease-in-out 3 forwards;
+}
+
+.scroll-down {
+  animation: bounce-in 1.75s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes bounce-in {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+
+  60% {
+    opacity: 1;
+    transform: none;
+  }
 }

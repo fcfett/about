@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import Image from 'next/image'
 
 import RoundFrameImage from '../round-framed-image'
 import styles from './styles.module.css'
@@ -35,7 +36,24 @@ export default function Hero() {
       <input id={TOGGLE_ID} type="checkbox" className={styles['hero-toggle']} />
 
       <section className="relative flex w-full max-w-5xl flex-col">
-        <h1>
+        <h1 className="relative">
+          <span
+            className={classNames(
+              styles['click-me'],
+              'absolute flex flex-col items-center -top-[3vmin] right-0 font-script text-[3vmin]'
+            )}
+          >
+            <span className="relative block -rotate-12">Click me!</span>
+            <figure className="relative h-[3vmin] w-[3vmin]">
+              <Image
+                fill
+                alt="arrow icon"
+                src="/icons/arrow-down.svg"
+                className="-translate-y-1/4 -rotate-12"
+              />
+            </figure>
+          </span>
+
           <label className={styles['hero-label']} htmlFor={TOGGLE_ID}>
             <span
               title={firstName}
@@ -54,7 +72,7 @@ export default function Hero() {
 
         <h2
           title={generalistTitle}
-          className="flex w-full justify-between px-[8vmin] font-sans text-[3vmin] font-light uppercase"
+          className="flex w-full justify-between font-sans text-[3vmin] font-light uppercase"
         >
           {breakTextToSpans(generalistTitle, 'generalist-title')}
         </h2>
@@ -74,6 +92,25 @@ export default function Hero() {
         alt="Fett's professional profile picture"
         className={classNames(styles.image)}
       />
+
+      <a
+        href="#work-experience"
+        className={classNames(
+          styles['scroll-down'],
+          'absolute bottom-0 flex flex-col items-center text-center'
+        )}
+      >
+        <figcaption className="whitespace-pre-wrap text-xs font-bold uppercase tracking-widest">
+          Scroll
+        </figcaption>
+        <Image
+          width={42}
+          height={42}
+          alt="Chevron down icon"
+          src="/icons/chevron-down.svg"
+          className="-translate-y-2"
+        />
+      </a>
 
       <RoundFrameImage
         alt="Boba/Jango Fett helmet"

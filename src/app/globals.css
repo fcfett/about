@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* 
+    /*
     --foreground-rgb: 230, 195, 25;
     --background-rgb: 0, 0, 0;
     */
@@ -17,7 +17,7 @@
 }
 
 * {
-  scroll-behavior: smooth;
+  @apply scroll-smooth scrollbar-thin scrollbar-track-transparent scrollbar-thumb-current scrollbar-thumb-rounded-full;
 }
 
 body {

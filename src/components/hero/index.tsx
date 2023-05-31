@@ -1,5 +1,7 @@
 import classNames from 'classnames'
-import Image from 'next/image'
+
+import ArrowDown from '/public/icons/arrow-down.svg'
+import ChevronDown from '/public/icons/chevron-down.svg'
 
 import RoundFrameImage from '../round-framed-image'
 import styles from './styles.module.css'
@@ -45,10 +47,8 @@ export default function Hero() {
           >
             <span className="relative block -rotate-12">Click me!</span>
             <figure className="relative h-[3vmin] w-[3vmin]">
-              <Image
-                fill
-                alt="arrow icon"
-                src="/icons/arrow-down.svg"
+              <ArrowDown
+                alt="Arrow down icon"
                 className="-translate-y-1/4 -rotate-12"
               />
             </figure>
@@ -93,23 +93,23 @@ export default function Hero() {
         className={classNames(styles.image)}
       />
 
-      <a
-        href="#work-experience"
-        className={classNames(
-          styles['scroll-down'],
-          'absolute bottom-0 flex flex-col items-center text-center'
-        )}
-      >
-        <figcaption className="whitespace-pre-wrap text-xs font-bold uppercase tracking-widest">
-          Scroll
-        </figcaption>
-        <Image
-          width={42}
-          height={42}
-          alt="Chevron down icon"
-          src="/icons/chevron-down.svg"
-          className="-translate-y-2"
-        />
+      <a href="#work-experience" className="absolute bottom-0 pt-4">
+        <figure
+          className={classNames(
+            styles['scroll-down'],
+            'flex flex-col items-center text-center'
+          )}
+        >
+          <figcaption className="whitespace-pre-wrap text-xs font-bold uppercase tracking-widest">
+            Scroll
+          </figcaption>
+          <ChevronDown
+            width={42}
+            height={42}
+            alt="Chevron down icon"
+            className="-translate-y-2"
+          />
+        </figure>
       </a>
 
       <RoundFrameImage

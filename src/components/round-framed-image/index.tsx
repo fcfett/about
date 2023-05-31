@@ -14,6 +14,7 @@ export default function RoundFrameImage({ className, src, alt }: Props) {
         priority
         src={src}
         alt={alt}
+        sizes="80vw"
         className={styles['next-image']}
       />
     </figure>

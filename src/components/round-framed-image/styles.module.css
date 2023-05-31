@@ -11,7 +11,7 @@
   }
 
   &:after {
-    @apply border-[0.6vmin] border-black;
+    @apply border-[0.6vmin] border-current;
   }
 }
 

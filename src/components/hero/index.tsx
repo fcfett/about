@@ -93,22 +93,17 @@ export default function Hero() {
         className={classNames(styles.image)}
       />
 
-      <a href="#work-experience" className="absolute bottom-0 pt-4">
+      <a href="#work-experience" className="absolute bottom-4 pt-4">
         <figure
           className={classNames(
             styles['scroll-down'],
-            'flex flex-col items-center text-center'
+            'flex flex-col gap-2 items-center text-center'
           )}
         >
           <figcaption className="whitespace-pre-wrap text-xs font-bold uppercase tracking-widest">
             Scroll
           </figcaption>
-          <ChevronDown
-            width={42}
-            height={42}
-            alt="Chevron down icon"
-            className="-translate-y-2"
-          />
+          <ChevronDown width={42} height={24} alt="Chevron down icon" />
         </figure>
       </a>
 

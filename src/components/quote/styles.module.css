@@ -1,0 +1,51 @@
+.fett {
+  bottom: 0;
+  margin: 40px 0 -50px;
+  position: relative;
+  width: 100%;
+}
+
+.cap,
+.glasses {
+  @apply absolute opacity-0;
+  transition-duration: 0.25s, 2s;
+  transform-origin: center center;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+}
+
+.cap {
+  right: 20%;
+  top: 2%;
+  transform: translate(300%, -400%) rotate(1360deg);
+  width: 42%;
+}
+
+.glasses {
+  right: 17.5%;
+  top: 25%;
+  transform: translate(300%, 600%) rotate(980deg);
+  width: 40%;
+}
+
+.illustration {
+  @apply relative m-0 w-96 max-w-full brightness-90 grayscale;
+
+  &.is-visible {
+    .cap,
+    .glasses {
+      opacity: 1;
+      transition-duration: 0.5s, 1.5s;
+    }
+
+    .cap {
+      transition-delay: 0.5s;
+      transform: translate(0) rotate(4deg);
+    }
+
+    .glasses {
+      transition-delay: 0.3s;
+      transform: translate(0) rotate(2deg);
+    }
+  }
+}

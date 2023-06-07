@@ -18,7 +18,7 @@ export default function Quote() {
         <strong className="mt-5 block text-right">– Felipe Fett</strong>
       </article>
 
-      <aside className="ml-auto mt-auto flex flex-col justify-end">
+      <aside className="ml-auto mt-auto flex flex-col justify-end pt-8">
         <Figure />
       </aside>
     </>

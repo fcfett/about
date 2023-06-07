@@ -3,12 +3,14 @@ import Hero from '@/components/hero'
 import OtherPassions from '@/components/other-passions'
 import Quote from '@/components/quote'
 import Social from '@/components/social'
+import ThemeSwitcher from '@/components/theme-toggle'
 import Slide from '@/components/viewport-slider/slide'
 import ViewportSlider from '@/components/viewport-slider/slider'
 
 export default function Home() {
   return (
     <main className="absolute inset-0 flex overflow-hidden">
+      <ThemeSwitcher className="absolute right-4 top-4 z-10" />
       <ViewportSlider>
         <Slide
           id="hero"
@@ -16,7 +18,7 @@ export default function Home() {
         >
           <Hero />
         </Slide>
-        <Slide id="work-experience" className="px-6 py-10">
+        <Slide id="work-experience" className="overflow-hidden px-6 py-10">
           <Carreer />
         </Slide>
         <Slide
@@ -25,7 +27,7 @@ export default function Home() {
         >
           <Quote />
         </Slide>
-        <Slide id="other-passions" className="px-6 py-10">
+        <Slide id="other-passions" className="overflow-hidden px-6 py-10">
           <OtherPassions />
         </Slide>
         <Slide id="social" className="px-6 py-10">

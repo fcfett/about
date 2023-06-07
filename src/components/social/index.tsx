@@ -46,7 +46,7 @@ export default function Social() {
   return (
     <>
       <h1 className="font-serif text-4xl font-black">@fcfett</h1>
-      <ul className="my-auto flex flex-wrap items-center justify-around gap-4">
+      <ul className="my-auto flex flex-wrap items-center justify-around gap-x-8 gap-y-4 ">
         {LINKS.map(({ name, url, Icon }) => (
           <li key={name}>
             <a
@@ -57,7 +57,7 @@ export default function Social() {
             >
               <Icon
                 alt={`${name} icon`}
-                className="max-h-[12rem] w-[25vmin] max-w-[12rem]"
+                className="h-[15vmin] max-h-[12rem] max-w-[12rem]"
               />
               <h2 className="font-serif text-2xl font-bold">{name}</h2>
             </a>

@@ -1,6 +1,6 @@
 .fett {
   bottom: 0;
-  margin: 40px 0 -50px;
+  margin-bottom: -40px;
   position: relative;
   width: 100%;
 }
@@ -16,20 +16,20 @@
 
 .cap {
   right: 20%;
-  top: 2%;
+  top: -8%;
   transform: translate(300%, -400%) rotate(1360deg);
   width: 42%;
 }
 
 .glasses {
   right: 17.5%;
-  top: 25%;
+  top: 17.5%;
   transform: translate(300%, 600%) rotate(980deg);
   width: 40%;
 }
 
 .illustration {
-  @apply relative m-0 w-96 max-w-full brightness-90 grayscale;
+  @apply relative m-0 max-w-[400px] brightness-90 grayscale;
 
   &.is-visible {
     .cap,

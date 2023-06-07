@@ -1,5 +1,6 @@
 import './globals.css'
 
+import Script from 'next/script'
 //import { Roboto_Slab, Work_Sans } from 'next/font/google'
 import { HTMLAttributes } from 'react'
 
@@ -28,7 +29,7 @@ type RootLayoutProps = HTMLAttributes<HTMLBodyElement>
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           rel="stylesheet"
         />
       </head>
+      <Script type="text/javascript" src="/static/set-theme.js" />
       <body
       /* className={classNames(robotoSlab.className, workSans.className)} */
       >

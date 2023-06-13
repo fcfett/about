@@ -1,0 +1,28 @@
+.backdrop {
+  @apply fixed inset-0 bg-no-repeat;
+  animation: theme-transition ease-out forwards;
+  background-size: 200% 200%;
+  background-image: radial-gradient(
+    circle at 100% 0,
+    rgb(var(--foreground-rgb)) 50%,
+    transparent 50%
+  );
+}
+
+.button {
+  @apply absolute right-4 top-4 z-10 flex h-10 w-10 flex-col items-center justify-center rounded-full bg-current transition-colors;
+}
+
+.icon {
+  @apply absolute block fill-[rgb(var(--background-rgb))] transition-transform;
+}
+
+@keyframes theme-transition {
+  0% {
+    @apply bg-right-top;
+  }
+
+  100% {
+    @apply bg-left-bottom;
+  }
+}

@@ -10,7 +10,7 @@ import ViewportSlider from '@/components/viewport-slider/slider'
 export default function Home() {
   return (
     <main className="absolute inset-0 flex overflow-hidden">
-      <ThemeSwitcher className="absolute right-4 top-4 z-10" />
+      <ThemeSwitcher />
       <ViewportSlider>
         <Slide
           id="hero"

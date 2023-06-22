@@ -6,6 +6,7 @@ const WORKING_EXPERIENCES = [
   {
     company: 'Legends Of Learning',
     startDate: '2022-01-09',
+    endDate: '2023-05-09',
     url: 'https://www.linkedin.com/company/legends-of-learning/',
     imageUrl: '/companies/lol.jpg',
   },
@@ -51,15 +52,21 @@ const WORKING_EXPERIENCES_BY_DATE_ASC = WORKING_EXPERIENCES.sort(
   (a, b) => +DateTime.fromISO(a.startDate) - +DateTime.fromISO(b.startDate)
 )
 
-export default function Carreer() {
+const getDateString = (dateISO: string) =>
+  DateTime.fromISO(dateISO).toLocaleString({
+    month: 'short',
+    year: 'numeric',
+  })
+
+export default function Career() {
   return (
     <>
       <h1 className="font-serif text-4xl font-black uppercase">
         Work Experience
       </h1>
-      <ul className="my-auto flex flex-wrap items-center justify-center gap-4">
+      <ul className="my-auto flex flex-wrap justify-center gap-4">
         {WORKING_EXPERIENCES_BY_DATE_ASC.map(
-          ({ startDate, company, url, imageUrl }) => (
+          ({ startDate, endDate, company, url, imageUrl }) => (
             <li key={startDate}>
               <a
                 href={url}
@@ -67,20 +74,33 @@ export default function Carreer() {
                 rel="noreferrer"
                 className="relative flex flex-col items-center text-center hover:underline"
               >
-                <RoundFrameImage alt="Boba/Jango Fett helmet" src={imageUrl} />
+                <RoundFrameImage src={imageUrl} alt={`${company}'s logo`} />
                 <h2 className="hidden font-serif font-bold lg:block">
                   {company}
                 </h2>
                 <small>
-                  {DateTime.fromISO(startDate).toLocaleString({
-                    month: 'short',
-                    year: 'numeric',
-                  })}
+                  {getDateString(startDate)}
+                  {endDate && (
+                    <>
+                      {' '}
+                      <span className="hidden sm:inline">&ndash;</span>
+                      <br className="block sm:hidden" />{' '}
+                      {getDateString(endDate)}
+                    </>
+                  )}
                 </small>
               </a>
             </li>
           )
         )}
+        <li className="w-[25vmin] max-w-[12rem] text-center">
+          <figure className="flex h-[25vmin] max-h-[12rem] items-center justify-center overflow-hidden rounded-full border-[0.6vmin] border-dashed border-current text-[15vmin] font-black">
+            ?
+          </figure>
+          <h2 className="font-serif text-sm font-bold leading-tight lg:text-base">
+            What comes next?
+          </h2>
+        </li>
       </ul>
     </>
   )

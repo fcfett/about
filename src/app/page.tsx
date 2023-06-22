@@ -1,4 +1,4 @@
-import Carreer from '@/components/carreer'
+import Career from '@/components/career'
 import Hero from '@/components/hero'
 import OtherPassions from '@/components/other-passions'
 import Quote from '@/components/quote'
@@ -19,7 +19,7 @@ export default function Home() {
           <Hero />
         </Slide>
         <Slide id="work-experience" className="overflow-hidden px-6 py-10">
-          <Carreer />
+          <Career />
         </Slide>
         <Slide
           id="quote"

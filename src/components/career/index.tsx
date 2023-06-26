@@ -1,5 +1,6 @@
 import { DateTime } from 'luxon'
 
+import PdfDownload from '/public/icons/pdf-download.svg'
 import RoundFrameImage from '@/components/round-framed-image'
 
 const WORKING_EXPERIENCES = [
@@ -63,6 +64,14 @@ export default function Career() {
     <>
       <h1 className="font-serif text-4xl font-black uppercase">
         Work Experience
+        <a
+          className="ml-2 inline-block"
+          target="_blank"
+          href="https://fcfett.github.io/resources/fcfett-resume.pdf"
+          rel="noreferrer"
+        >
+          <PdfDownload className="h-7" />
+        </a>
       </h1>
       <ul className="my-auto flex flex-wrap justify-center gap-4">
         {WORKING_EXPERIENCES_BY_DATE_ASC.map(

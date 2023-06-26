@@ -1,7 +1,7 @@
 import { FC, HTMLProps } from 'react'
 
 import CodePenIcon from '/public/icons/codepen.svg'
-import FacebookIcon from '/public/icons/facebook.svg'
+//import FacebookIcon from '/public/icons/facebook.svg'
 import GitHubIcon from '/public/icons/github.svg'
 import InstagramIcon from '/public/icons/instagram.svg'
 import LinkedInIcon from '/public/icons/linkedin.svg'
@@ -16,19 +16,14 @@ type Link = {
 
 const LINKS: Link[] = [
   {
-    url: 'https://facebook.com/fcfett',
-    name: 'Facebook',
-    Icon: FacebookIcon,
-  },
-  {
-    url: 'https://instagram.com/fcfett/',
-    name: 'Instagram',
-    Icon: InstagramIcon,
-  },
-  {
     url: 'https://linkedin.com/in/fcfett',
     name: 'LinkedIn',
     Icon: LinkedInIcon,
+  },
+  {
+    url: 'https://github.com/fcfett',
+    name: 'GitHub',
+    Icon: GitHubIcon,
   },
   {
     url: 'https://codepen.io/fcfett/',
@@ -36,10 +31,15 @@ const LINKS: Link[] = [
     Icon: CodePenIcon,
   },
   {
-    url: 'https://github.com/fcfett',
-    name: 'GitHub',
-    Icon: GitHubIcon,
+    url: 'https://instagram.com/fcfett/',
+    name: 'Instagram',
+    Icon: InstagramIcon,
   },
+  /* {
+    url: 'https://facebook.com/fcfett',
+    name: 'Facebook',
+    Icon: FacebookIcon,
+  }, */
 ]
 
 export default function Social() {

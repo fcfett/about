@@ -93,13 +93,11 @@ export default function Hero() {
         className={classNames(styles.image)}
       />
 
-      <a href="#work-experience" className="absolute bottom-4 pt-4">
-        <figure
-          className={classNames(
-            styles['scroll-down'],
-            'flex flex-col gap-2 items-center text-center'
-          )}
-        >
+      <a
+        href="#work-experience"
+        className="hover-invert absolute bottom-4 pt-4"
+      >
+        <figure className={styles['scroll-down']}>
           <figcaption className="whitespace-pre-wrap text-xs font-bold uppercase tracking-widest">
             Scroll
           </figcaption>

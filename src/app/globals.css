@@ -24,3 +24,18 @@ body {
 svg {
   fill: currentColor;
 }
+
+@layer utilities {
+  .hover-invert {
+    @apply px-4 py-2 rounded;
+
+    &:hover,
+    &:focus-within {
+      @apply bg-[rgb(var(--foreground-rgb))] text-[rgb(var(--background-rgb))] outline-none;
+    }
+  }
+
+  .link {
+    @apply outline-none focus-within:underline hover:underline;
+  }
+}

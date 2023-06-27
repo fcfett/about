@@ -38,7 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Work+Sans:wght@300;400;600&amp;family=Roboto+Slab:wght@300;700&amp;display=swap"
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Work+Sans:wght@300;400;600&family=Roboto+Slab:wght@300;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

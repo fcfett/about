@@ -62,10 +62,10 @@ const getDateString = (dateISO: string) =>
 export default function Career() {
   return (
     <>
-      <h1 className="font-serif text-4xl font-black uppercase">
+      <h1 className="flex font-serif text-4xl font-black uppercase">
         Work Experience
         <a
-          className="ml-2 inline-block"
+          className="hover-invert ml-2 inline-block"
           target="_blank"
           href="https://fcfett.github.io/resources/fcfett-resume.pdf"
           rel="noreferrer"
@@ -81,7 +81,7 @@ export default function Career() {
                 href={url}
                 target="_blank"
                 rel="noreferrer"
-                className="relative flex flex-col items-center text-center hover:underline"
+                className="link relative flex flex-col items-center text-center"
               >
                 <RoundFrameImage src={imageUrl} alt={`${company}'s logo`} />
                 <h2 className="hidden font-serif font-bold lg:block">

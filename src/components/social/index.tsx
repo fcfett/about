@@ -53,7 +53,7 @@ export default function Social() {
               href={url}
               target="_blank"
               rel="noreferrer"
-              className="relative flex flex-col items-center gap-2 text-center hover:underline"
+              className="link relative flex w-[15vmax] flex-col items-center gap-2 text-center"
             >
               <Icon
                 alt={`${name} icon`}

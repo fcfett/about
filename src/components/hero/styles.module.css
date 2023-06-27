@@ -72,6 +72,7 @@
 }
 
 .scroll-down {
+  @apply flex flex-col gap-2 items-center text-center;
   animation: bounce-in 1.75s ease-in-out infinite alternate-reverse;
 }
 

@@ -1,0 +1,28 @@
+.gallery {
+  @apply flex-1  flex flex-wrap items-center justify-center;
+}
+
+.picture {
+  @apply flex-1 shrink-0 basis-1/2 md:shrink md:basis-1/4 max-w-[38vmin] z-10 p-[1vmin] rounded bg-white shadow-2xl shadow-black;
+  @apply rotate-3 odd:-rotate-3 z-0 even:z-10;
+
+  &.wide {
+    @apply max-w-[56vmin] md:basis-full last-of-type:-rotate-3 -m-2;
+
+    & > .image {
+      @apply max-h-[32vmin];
+    }
+  }
+}
+
+.image {
+  @apply object-cover max-h-[40vmin];
+}
+
+.caption {
+  @apply font-script text-black text-center text-[3vmin] whitespace-pre-wrap pt-[0.5vmin];
+
+  & > a {
+    @apply text-sky-400 hover:underline;
+  }
+}

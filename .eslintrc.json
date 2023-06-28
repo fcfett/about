@@ -7,6 +7,7 @@
   },
   "extends": [
     "eslint:recommended",
+    "next/core-web-vitals" /* conflicting with auto formatting */,
     "plugin:react/recommended",
     "plugin:tailwindcss/recommended",
     "plugin:@typescript-eslint/recommended",

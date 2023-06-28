@@ -12,10 +12,11 @@ type Props = {
 } & Pick<ImageProps, 'height' | 'width' | 'src' | 'alt' | 'className' | 'style'>
 
 export default function Picture({
-  caption,
-  isWide = false,
-  className,
+  alt,
   style,
+  caption,
+  className,
+  isWide = false,
   imagePosition = 'center',
   ...props
 }: Props) {
@@ -31,7 +32,11 @@ export default function Picture({
         classNames(styles.picture, { [styles.wide]: isWide }, className)
       )}
     >
-      <Image className={classNames(styles.image, objectPosition)} {...props} />
+      <Image
+        alt={alt}
+        className={classNames(styles.image, objectPosition)}
+        {...props}
+      />
       {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
     </figure>
   )

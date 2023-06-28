@@ -12,7 +12,7 @@
 }
 
 .first-name {
-  @apply transition-all duration-300 ease-out;
+  @apply transition-all duration-300 ease-out font-light;
 }
 
 .last-name {

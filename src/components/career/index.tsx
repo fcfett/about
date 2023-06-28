@@ -87,7 +87,7 @@ export default function Career() {
                 <h2 className="hidden font-serif font-bold lg:block">
                   {company}
                 </h2>
-                <small>
+                <small className="font-sans font-normal">
                   {getDateString(startDate)}
                   {endDate && (
                     <>
@@ -103,7 +103,7 @@ export default function Career() {
           )
         )}
         <li className="w-[25vmin] max-w-[12rem] text-center">
-          <figure className="flex h-[25vmin] max-h-[12rem] items-center justify-center overflow-hidden rounded-full border-[0.6vmin] border-dashed border-current text-[15vmin] font-black">
+          <figure className="flex h-[25vmin] max-h-[12rem] items-center justify-center overflow-hidden rounded-full border-[0.6vmin] border-dashed border-current font-sans text-[15vmin] font-black">
             ?
           </figure>
           <h2 className="font-serif text-sm font-bold leading-tight lg:text-base">

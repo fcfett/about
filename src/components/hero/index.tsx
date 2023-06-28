@@ -98,7 +98,7 @@ export default function Hero() {
         className="hover-invert absolute bottom-4 pt-4"
       >
         <figure className={styles['scroll-down']}>
-          <figcaption className="whitespace-pre-wrap text-xs font-bold uppercase tracking-widest">
+          <figcaption className="whitespace-pre-wrap font-sans text-xs font-bold uppercase tracking-widest">
             Scroll
           </figcaption>
           <ChevronDown width={42} height={24} alt="Chevron down icon" />

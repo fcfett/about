@@ -3,7 +3,7 @@ import Figure from './figure'
 export default function Quote() {
   return (
     <>
-      <article className="w-1/2 grow font-serif text-[5vmin] text-white sm:text-[4vmin]">
+      <article className="w-1/2 grow font-serif text-[5vmin] font-normal text-white sm:text-[4vmin]">
         {/* <q>
         Senioridade, acima de tudo, é uma questão de postura.
         <br />

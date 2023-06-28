@@ -2,7 +2,7 @@ import './globals.css'
 
 import Script from 'next/script'
 //import { Roboto_Slab, Work_Sans } from 'next/font/google'
-import { HTMLAttributes } from 'react'
+import React from 'react'
 
 /*
 const robotoSlab = Roboto_Slab({
@@ -25,7 +25,9 @@ export const metadata = {
   description: "Nice to meet you! I'm Fett",
 }
 
-type RootLayoutProps = HTMLAttributes<HTMLBodyElement>
+type RootLayoutProps = {
+  children: React.ReactNode
+}
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (

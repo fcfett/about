@@ -8,20 +8,30 @@ import styles from './styles.module.css'
 type Props = {
   isWide?: boolean
   caption?: ReactNode
-} & Pick<ImageProps, 'height' | 'width' | 'src' | 'alt' | 'className'>
+  imagePosition?: 'top' | 'bottom' | 'center'
+} & Pick<ImageProps, 'height' | 'width' | 'src' | 'alt' | 'className' | 'style'>
 
 export default function Picture({
   caption,
   isWide = false,
   className,
+  style,
+  imagePosition = 'center',
   ...props
 }: Props) {
+  const objectPosition = {
+    center: '',
+    top: 'object-top',
+    bottom: 'object-bottom',
+  }[imagePosition]
   return (
-    <figure className={classNames(styles.picture, { [styles.wide]: isWide })}>
-      <Image
-        className={twMerge(classNames(styles.image, className))}
-        {...props}
-      />
+    <figure
+      style={style}
+      className={twMerge(
+        classNames(styles.picture, { [styles.wide]: isWide }, className)
+      )}
+    >
+      <Image className={classNames(styles.image, objectPosition)} {...props} />
       {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
     </figure>
   )

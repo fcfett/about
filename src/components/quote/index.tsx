@@ -10,10 +10,10 @@ export default function Quote() {
         De nada vale um currículo todo enfeitadinho se, na hora do pega, tu não assume teus BO.
       </q> */}
         <q>
-          Seniority, above all, is a matter of posture.
+          Seniority, above all, is a matter of responsibility.
           <br />
-          It&apos;s useless to have a fancy resume if, when everything is
-          falling apart, you can&apos;t handle your mess.
+          If you can&apos;t handle your mess when everything is falling apart, a
+          fancy resume is useless.
         </q>
         <strong className="mt-5 block text-right">– Felipe Fett</strong>
       </article>

@@ -16,6 +16,9 @@ module.exports = {
         serif: ['Roboto Slab', ...defaultTheme.fontFamily.serif],
         script: 'Caveat',
       },
+      screens: {
+        xs: '425px',
+      },
       transitionTimingFunction: {
         bounce: 'cubic-bezier(1,-.3,.03,1.4)',
       },

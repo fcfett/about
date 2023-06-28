@@ -14,8 +14,8 @@ export default function MusicGallery() {
         isWide
         src={shows}
         alt="Shows"
+        imagePosition="bottom"
         caption={'Shows\n(KsE ❤)'}
-        className="object-bottom"
       />
       <Picture
         src={playtogether}
@@ -26,7 +26,9 @@ export default function MusicGallery() {
         isWide
         src={band}
         alt="Band"
-        className="object-bottom"
+        style={{ zIndex: 0 }}
+        imagePosition="bottom"
+        className="-translate-x-3"
         caption={
           <>
             Yep, I had a{' '}

@@ -16,6 +16,7 @@ export default function BeerGallery() {
         isWide
         alt="My deceased YouTube channel"
         src={bqc}
+        className="translate-x-3"
         caption={
           <>
             Once uppon a time on{' '}
@@ -25,8 +26,9 @@ export default function BeerGallery() {
               href="https://youtube.com/bahqueceva"
             >
               YouTube
-            </a>{' '}
-            (Bah, Que Ceva)
+            </a>
+            <br />
+            <small>(Bah, Que Ceva)</small>
           </>
         }
       />

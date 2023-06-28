@@ -15,12 +15,7 @@ export default function FamilyGallery() {
       <Picture isWide src={fun} alt="Lightsabers at the market" />
       <Picture src={food} alt="A fancy meal" />
       <Picture src={family} alt="My wife, goddaughters and I" />
-      <Picture
-        isWide
-        src={us}
-        alt="My boy, wife and I"
-        className="object-top"
-      />
+      <Picture isWide src={us} imagePosition="top" alt="My boy, wife and I" />
       <Picture src={son} alt="My boy and I" />
     </Gallery>
   )

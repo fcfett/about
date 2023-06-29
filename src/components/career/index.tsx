@@ -69,10 +69,10 @@ const getDateString = (dateISO: string) =>
 export default function Career() {
   return (
     <>
-      <h1 className="flex font-serif text-4xl font-black uppercase">
+      <h1 className="flex flex-wrap items-end gap-2 font-serif text-4xl font-black uppercase">
         Work Experience
         <a
-          className="hover-invert ml-2 inline-block"
+          className="hover-invert inline-block"
           target="_blank"
           href="https://fcfett.github.io/resources/fcfett-resume.pdf"
           rel="noreferrer"

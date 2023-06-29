@@ -21,7 +21,13 @@ export default function Figure() {
         [styles['is-visible']]: isVisible,
       })}
     >
-      <Image src={fett} className={styles.fett} alt="Felipe Fett" />
+      <Image
+        src={fett}
+        className={styles.fett}
+        alt="Felipe Fett"
+        placeholder="blur"
+        loading="eager"
+      />
       <Image src={glasses} className={styles.glasses} alt="Thug Life Glasses" />
       <Image src={cap} className={styles.cap} alt="Thug Life Cap" />
     </figure>

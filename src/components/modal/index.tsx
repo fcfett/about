@@ -20,12 +20,12 @@ export default function Modal({ id, label, children }: Props) {
       >
         <form method="dialog">
           <button
+            autoFocus
             type="submit"
+            formNoValidate
             aria-label="close"
             formMethod="dialog"
-            formNoValidate
-            autoFocus
-            className="absolute inset-0"
+            className="absolute inset-0 h-full w-full"
           />
         </form>
         <div className={styles.content}>{children}</div>

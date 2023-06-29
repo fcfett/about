@@ -80,7 +80,7 @@ export default function Hero() {
         <h3
           className={classNames(
             styles.specialist,
-            'absolute bottom-0 right-[1.5vmin] font-script text-[5vmin] self-end -rotate-6'
+            'absolute bottom-0 right-[1.5vmin] font-script font-bold text-[5vmin] self-end -rotate-6'
           )}
         >
           {specialistText}

@@ -9,7 +9,7 @@ import ViewportSlider from '@/components/viewport-slider/slider'
 
 export default function Home() {
   return (
-    <main className="absolute inset-0 flex overflow-hidden">
+    <main className="absolute inset-0 flex overflow-hidden font-sans font-normal">
       <ThemeSwitcher />
       <ViewportSlider>
         <Slide

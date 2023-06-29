@@ -8,7 +8,7 @@ const robotoSlab = Roboto_Slab({
   preload: true,
   /* display: 'swap', */
   subsets: ['latin'],
-  weight: ['300', '400', '700'],
+  weight: ['300', '400', '600'],
 })
 
 const workSans = Work_Sans({
@@ -36,18 +36,6 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="dark">
-      {/* <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Work+Sans:wght@300;400;600&family=Roboto+Slab:wght@300;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head> */}
       <Script type="text/javascript" src="/static/set-theme.js" />
       <body
         className={classNames(

@@ -16,7 +16,7 @@
 }
 
 .last-name {
-  @apply font-bold uppercase;
+  @apply font-semibold uppercase;
 }
 
 .specialist {

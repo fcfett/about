@@ -1,5 +1,12 @@
 import { DateTime } from 'luxon'
 
+import adp from '/public/companies/adp.jpg'
+import agi from '/public/companies/agi.jpg'
+import lol from '/public/companies/lol.jpg'
+import ls from '/public/companies/ls.jpg'
+import nt from '/public/companies/nt.jpg'
+import stefanini from '/public/companies/stefanini.jpg'
+import vg8 from '/public/companies/vg8.jpg'
 import PdfDownload from '/public/icons/pdf-download.svg'
 import RoundFrameImage from '@/components/round-framed-image'
 
@@ -9,43 +16,43 @@ const WORKING_EXPERIENCES = [
     startDate: '2022-01-09',
     endDate: '2023-05-09',
     url: 'https://www.linkedin.com/company/legends-of-learning/',
-    imageUrl: '/companies/lol.jpg',
+    image: lol,
   },
   {
     company: 'Agi',
     startDate: '2021-01-01',
     url: 'https://www.linkedin.com/company/agibank/',
-    imageUrl: '/companies/agi.jpg',
+    image: agi,
   },
   {
     url: 'https://www.linkedin.com/company/adpbrazillabs/',
     company: 'ADP Brazil Labs',
     startDate: '2020-03-01',
-    imageUrl: '/companies/adp.jpg',
+    image: adp,
   },
   {
     url: 'https://www.linkedin.com/company/vg8/',
     company: 'VG8',
     startDate: '2019-05-01',
-    imageUrl: '/companies/vg8.jpg',
+    image: vg8,
   },
   {
     url: 'https://www.linkedin.com/company/grupols/',
     company: 'Grupo L&S',
     startDate: '2017-06-01',
-    imageUrl: '/companies/ls.jpg',
+    image: ls,
   },
   {
     url: 'https://www.linkedin.com/company/stefanini-brasil',
     company: 'Stefanini / Dell',
     startDate: '2015-09-01',
-    imageUrl: '/companies/stefanini.jpg',
+    image: stefanini,
   },
   {
     url: 'https://www.linkedin.com/company/ntconsult',
     company: 'NTConsult',
     startDate: '2011-05-01',
-    imageUrl: '/companies/nt.jpg',
+    image: nt,
   },
 ]
 
@@ -75,7 +82,7 @@ export default function Career() {
       </h1>
       <ul className="my-auto flex flex-wrap justify-center gap-4">
         {WORKING_EXPERIENCES_BY_DATE_ASC.map(
-          ({ startDate, endDate, company, url, imageUrl }) => (
+          ({ startDate, endDate, company, url, image }) => (
             <li key={startDate}>
               <a
                 href={url}
@@ -83,7 +90,7 @@ export default function Career() {
                 rel="noreferrer"
                 className="link relative flex flex-col items-center text-center"
               >
-                <RoundFrameImage src={imageUrl} alt={`${company}'s logo`} />
+                <RoundFrameImage src={image} alt={`${company}'s logo`} />
                 <h2 className="hidden font-serif font-bold lg:block">
                   {company}
                 </h2>

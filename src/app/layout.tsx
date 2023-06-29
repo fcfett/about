@@ -3,7 +3,6 @@ import './globals.css'
 import classNames from 'classnames'
 import { Metadata } from 'next'
 import { Caveat, Roboto_Slab, Work_Sans } from 'next/font/google'
-import Script from 'next/script'
 import React from 'react'
 
 const robotoSlab = Roboto_Slab({
@@ -21,7 +20,6 @@ const workSans = Work_Sans({
 })
 
 const caveat = Caveat({
-  display: 'swap',
   preload: true,
   subsets: ['latin'],
   weight: ['700'],
@@ -42,7 +40,6 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="dark">
-      <Script type="text/javascript" src="/static/set-theme.js" />
       <body
         className={classNames(
           caveat.className,

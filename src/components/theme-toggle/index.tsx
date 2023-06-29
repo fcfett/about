@@ -1,7 +1,7 @@
 'use client'
 
 import classNames from 'classnames'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import MoonIcon from '/public/icons/moon.svg'
 import SunIcon from '/public/icons/sun.svg'
@@ -34,6 +34,16 @@ export default function ThemeSwitcher() {
       triggerBackdropTransition()
     }
   }
+
+  useEffect(() => {
+    const storedTheme = localStorage?.getItem(THEME_KEY)
+    const isDarkThemeEnabled =
+      storedTheme === 'dark' ||
+      (!(THEME_KEY in localStorage) &&
+        window?.matchMedia('(prefers-color-scheme: dark)').matches)
+
+    document.documentElement.classList.toggle('dark', isDarkThemeEnabled)
+  }, [])
 
   return (
     <>

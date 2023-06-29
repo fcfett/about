@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import Image, { ImageProps } from 'next/image'
 import { HTMLAttributes } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 import styles from './styles.module.css'
 
@@ -8,7 +9,9 @@ type Props = Pick<ImageProps, 'alt' | 'src'> & HTMLAttributes<HTMLElement>
 
 export default function RoundFrameImage({ className, src, alt }: Props) {
   return (
-    <figure className={classNames(styles['round-frame-image'], className)}>
+    <figure
+      className={twMerge(classNames(styles['round-frame-image'], className))}
+    >
       <Image
         fill
         priority

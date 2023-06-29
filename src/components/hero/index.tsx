@@ -42,7 +42,7 @@ export default function Hero() {
           <span
             className={classNames(
               styles['click-me'],
-              'absolute flex flex-col items-center -top-[3vmin] right-0 font-script text-[3vmin]'
+              'absolute flex flex-col items-center -top-[3vmin] right-0 font-script font-bold text-[3vmin]'
             )}
           >
             <span className="relative block -rotate-12">Click me!</span>

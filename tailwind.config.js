@@ -12,9 +12,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Work Sans', ...defaultTheme.fontFamily.sans],
-        serif: ['Roboto Slab', ...defaultTheme.fontFamily.serif],
-        script: 'Caveat',
+        script: ['var(--caveat)'],
+        sans: ['var(--work-sans)', ...defaultTheme.fontFamily.sans],
+        serif: ['var(--roboto-slab)', ...defaultTheme.fontFamily.serif],
       },
       screens: {
         xs: '425px',

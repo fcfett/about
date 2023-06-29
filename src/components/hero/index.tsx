@@ -88,9 +88,9 @@ export default function Hero() {
       </section>
 
       <RoundFrameImage
-        src="https://raw.githubusercontent.com/fcfett/resources/master/profile.jpg"
-        alt="Fett's professional profile picture"
         className={classNames(styles.image)}
+        alt="Fett's professional profile picture"
+        src="https://raw.githubusercontent.com/fcfett/resources/master/profile.jpg"
       />
 
       <a
@@ -107,8 +107,8 @@ export default function Hero() {
 
       <RoundFrameImage
         alt="Boba/Jango Fett helmet"
-        src="https://raw.githubusercontent.com/fcfett/resources/master/fett-helmet.png"
         className={classNames(styles.image)}
+        src="https://raw.githubusercontent.com/fcfett/resources/master/fett-helmet.png"
       />
     </>
   )

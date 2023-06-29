@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-about",
+  "name": "next-about",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,6 +37,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.25.3",
     "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-tailwindcss": "^3.13.0",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.5",
     "postcss-nesting": "^11.2.2",

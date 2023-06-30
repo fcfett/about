@@ -37,7 +37,7 @@ export default function Hero() {
     <>
       <input id={TOGGLE_ID} type="checkbox" className={styles['hero-toggle']} />
 
-      <section className="relative flex w-full max-w-5xl flex-col">
+      <section className="relative flex w-full max-w-screen-xl flex-col">
         <h1 className="relative">
           <span
             className={classNames(

@@ -3,7 +3,7 @@
 }
 
 .hero-label {
-  @apply relative flex cursor-pointer items-center text-[14vmin] transition-all duration-300;
+  @apply relative flex cursor-pointer items-center text-[13vmin] transition-all duration-300;
   @apply visited:text-lime-500;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .last-name {
-  @apply font-semibold uppercase;
+  @apply font-bold uppercase;
 }
 
 .specialist {

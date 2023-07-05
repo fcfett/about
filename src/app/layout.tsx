@@ -9,7 +9,7 @@ const robotoSlab = Roboto_Slab({
   display: 'swap',
   subsets: ['latin'],
   variable: '--roboto-slab',
-  weight: ['300', '400', '600'],
+  weight: ['300', '400', '700'],
 })
 
 const workSans = Work_Sans({

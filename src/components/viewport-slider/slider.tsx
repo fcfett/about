@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import { HTMLAttributes } from 'react'
 import { twMerge } from 'tailwind-merge'
 
@@ -12,10 +11,8 @@ export default function ViewportSlider({
   return (
     <ul
       className={twMerge(
-        classNames(
-          'relative flex h-full w-full snap-y snap-mandatory flex-col overflow-auto',
-          className
-        )
+        'relative flex h-full w-full snap-y snap-mandatory flex-col overflow-auto',
+        className
       )}
       {...props}
     >

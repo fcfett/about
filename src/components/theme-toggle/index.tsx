@@ -8,8 +8,9 @@ import SunIcon from '/public/icons/sun.svg'
 
 import styles from './styles.module.css'
 
-const THEME_KEY = 'theme'
-const THEME_TRANSITION_DURATION_MS = 750
+export const THEME_KEY = 'theme'
+export const THEME_TRANSITION_DURATION_MS = 750
+export const MEDIA_DARK = '(prefers-color-scheme: dark)'
 
 export default function ThemeSwitcher() {
   const [isThemeInTransition, setIsThemeInTransition] = useState<boolean>(false)
@@ -23,11 +24,10 @@ export default function ThemeSwitcher() {
 
   const toggleTheme = () => {
     if (!isThemeInTransition) {
-      const theme = localStorage?.getItem(THEME_KEY)
-
-      const isDarkThemeEnabled = theme
-        ? theme === 'dark'
-        : window?.matchMedia('(prefers-color-scheme: dark)').matches
+      const storedTheme = localStorage?.getItem(THEME_KEY)
+      const isDarkThemeEnabled = storedTheme
+        ? storedTheme === 'dark'
+        : window?.matchMedia(MEDIA_DARK).matches
 
       document.documentElement.classList.toggle('dark', !isDarkThemeEnabled)
       localStorage.setItem(THEME_KEY, !isDarkThemeEnabled ? 'dark' : 'light')
@@ -39,8 +39,7 @@ export default function ThemeSwitcher() {
     const storedTheme = localStorage?.getItem(THEME_KEY)
     const isDarkThemeEnabled =
       storedTheme === 'dark' ||
-      (!(THEME_KEY in localStorage) &&
-        window?.matchMedia('(prefers-color-scheme: dark)').matches)
+      (!(THEME_KEY in localStorage) && window?.matchMedia(MEDIA_DARK).matches)
 
     document.documentElement.classList.toggle('dark', isDarkThemeEnabled)
   }, [])
@@ -50,7 +49,9 @@ export default function ThemeSwitcher() {
       {isThemeInTransition && (
         <figure
           className={styles.backdrop}
-          style={{ animationDuration: `${THEME_TRANSITION_DURATION_MS}ms` }}
+          style={{
+            animationDuration: `${THEME_TRANSITION_DURATION_MS}ms`,
+          }}
         />
       )}
 

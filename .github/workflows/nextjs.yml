@@ -24,6 +24,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  POST_HOG_KEY: ${{ secrets.POST_HOG_KEY }}
+  POST_HOG_API: ${{ vars.POST_HOG_API }}
+
 jobs:
   # Build job
   build:

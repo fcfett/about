@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { Metadata } from 'next'
 import { Caveat, Roboto_Slab, Work_Sans } from 'next/font/google'
 
-import PostHogScript from '@/scripts/post-hog-script'
+import SetThemeScript from '@/scripts/set-theme-script'
 
 const robotoSlab = Roboto_Slab({
   preload: true,
@@ -47,7 +47,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="dark">
-      <PostHogScript />
+      <SetThemeScript />
       <body
         className={classNames(
           caveat.variable,

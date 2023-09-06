@@ -26,12 +26,34 @@ svg {
 }
 
 @layer utilities {
+  .text-background {
+    @apply text-[rgb(var(--background-rgb))];
+  }
+
+  .bg-foreground {
+    @apply bg-[rgb(var(--foreground-rgb))];
+  }
+
+  .invert-colors {
+    @apply text-background bg-foreground;
+  }
+
+  .default-colors {
+    @apply text-[rgb(var(--foreground-rgb))] bg-[rgb(var(--background-rgb))];
+  }
+
   .hover-invert {
-    @apply px-4 py-2 rounded;
+    @apply px-4 py-2 rounded transition-colors outline-none;
 
     &:hover,
     &:focus-within {
-      @apply bg-[rgb(var(--foreground-rgb))] text-[rgb(var(--background-rgb))] outline-none;
+      &:not(.invert-colors) {
+        @apply text-background bg-foreground;
+      }
+
+      &.invert-colors {
+        @apply default-colors;
+      }
     }
   }
 

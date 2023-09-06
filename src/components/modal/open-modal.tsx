@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-interface Props {
+type Props = {
   modalId: string
   label: string
 }

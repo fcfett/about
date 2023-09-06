@@ -80,7 +80,7 @@ export default function Career() {
           <PdfDownload className="h-7" />
         </a>
       </h1>
-      <ul className="my-auto flex flex-wrap justify-center gap-4">
+      <ul className="m-auto flex flex-wrap justify-center gap-4 lg:max-w-4xl 2xl:max-w-full">
         {WORKING_EXPERIENCES_BY_DATE_ASC.map(
           ({ startDate, endDate, company, url, image }) => (
             <li key={startDate}>

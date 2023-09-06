@@ -1,9 +1,9 @@
 import classNames from 'classnames'
 
 import ArrowDown from '/public/icons/arrow-down.svg'
-import ChevronDown from '/public/icons/chevron-down.svg'
 
 import RoundFrameImage from '../round-framed-image'
+import FocusableAnchor from './focusable-anchor'
 import styles from './styles.module.css'
 
 const TOGGLE_ID = 'hero-toggle'
@@ -38,12 +38,7 @@ export default function Hero() {
       <input id={TOGGLE_ID} type="checkbox" className={styles['hero-toggle']} />
       <section className="relative flex w-full max-w-screen-xl flex-col px-[7.5vmin]">
         <h1 className="relative">
-          <span
-            className={classNames(
-              styles['click-me'],
-              'absolute flex flex-col items-center -top-[3vmin] right-0 font-script font-bold text-[3vmin]'
-            )}
-          >
+          <span className="absolute right-0 top-[-3vmin] flex animate-click-me flex-col items-center font-script text-[3vmin] font-bold">
             <span className="relative block -rotate-12">Click me!</span>
             <figure className="relative h-[3vmin] w-[3vmin]">
               <ArrowDown
@@ -86,29 +81,30 @@ export default function Hero() {
         </h3>
       </section>
 
-      <RoundFrameImage
-        className={classNames(styles.image)}
-        alt="Fett's professional profile picture"
-        src="https://raw.githubusercontent.com/fcfett/resources/master/profile.jpg"
-      />
+      <aside className={classNames(styles.image, styles.left)}>
+        <FocusableAnchor href="#social" className="rotate-3">
+          Follow me!
+        </FocusableAnchor>
+        <RoundFrameImage
+          alt="Fett's professional profile picture"
+          src="https://raw.githubusercontent.com/fcfett/resources/master/profile.jpg"
+        />
+      </aside>
 
-      <a
-        href="#work-experience"
-        className="hover-invert absolute bottom-4 pt-4"
-      >
-        <figure className={styles['scroll-down']}>
-          <figcaption className="whitespace-pre-wrap font-sans text-xs font-bold uppercase tracking-widest">
-            Scroll
-          </figcaption>
-          <ChevronDown width={42} height={24} alt="Chevron down icon" />
-        </figure>
-      </a>
-
-      <RoundFrameImage
-        alt="Boba/Jango Fett helmet"
-        className={classNames(styles.image)}
-        src="https://raw.githubusercontent.com/fcfett/resources/master/fett-helmet.png"
-      />
+      <aside className={classNames(styles.image, styles.right)}>
+        <FocusableAnchor
+          target="_blank"
+          rel="noreferrer"
+          href="https://calendly.com/fcfett/chat-with-fett"
+          className="-rotate-12"
+        >
+          Hire me!
+        </FocusableAnchor>
+        <RoundFrameImage
+          alt="Boba/Jango Fett helmet"
+          src="https://raw.githubusercontent.com/fcfett/resources/master/fett-helmet.png"
+        />
+      </aside>
     </>
   )
 }

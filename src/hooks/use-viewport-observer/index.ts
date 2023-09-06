@@ -2,7 +2,7 @@ import { createRef, useEffect, useState } from 'react'
 
 type Ref = HTMLElement
 
-interface Props {
+type Props = {
   shouldRenderOnce?: boolean
 }
 

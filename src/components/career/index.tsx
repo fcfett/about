@@ -1,5 +1,6 @@
 import { DateTime } from 'luxon'
 
+import ac from '/public/companies/ac.jpg'
 import adp from '/public/companies/adp.jpg'
 import agi from '/public/companies/agi.jpg'
 import lol from '/public/companies/lol.jpg'
@@ -12,9 +13,14 @@ import RoundFrameImage from '@/components/round-framed-image'
 
 const WORKING_EXPERIENCES = [
   {
+    company: 'Avenue Code',
+    startDate: '2023-10-01',
+    url: 'https://www.linkedin.com/company/avenuecode/',
+    image: ac,
+  },
+  {
     company: 'Legends Of Learning',
     startDate: '2022-01-09',
-    endDate: '2023-05-09',
     url: 'https://www.linkedin.com/company/legends-of-learning/',
     image: lol,
   },
@@ -82,7 +88,7 @@ export default function Career() {
       </h1>
       <ul className="m-auto flex flex-wrap justify-center gap-4 lg:max-w-4xl 2xl:max-w-full">
         {WORKING_EXPERIENCES_BY_DATE_ASC.map(
-          ({ startDate, endDate, company, url, image }) => (
+          ({ startDate, company, url, image }) => (
             <li key={startDate}>
               <a
                 href={url}
@@ -96,27 +102,11 @@ export default function Career() {
                 </h2>
                 <small className="font-sans font-normal">
                   {getDateString(startDate)}
-                  {endDate && (
-                    <>
-                      {' '}
-                      <span className="hidden sm:inline">&ndash;</span>
-                      <br className="block sm:hidden" />{' '}
-                      {getDateString(endDate)}
-                    </>
-                  )}
                 </small>
               </a>
             </li>
           )
         )}
-        <li className="w-[25vmin] max-w-[12rem] text-center">
-          <figure className="flex h-[25vmin] max-h-[12rem] items-center justify-center overflow-hidden rounded-full border-[0.6vmin] border-dashed border-current font-sans text-[15vmin] font-black">
-            ?
-          </figure>
-          <h2 className="font-serif text-sm font-bold leading-tight lg:text-base">
-            What comes next?
-          </h2>
-        </li>
       </ul>
     </>
   )

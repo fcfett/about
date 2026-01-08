@@ -1,12 +1,12 @@
-import family from 'public/pictures/family.jpg'
-import food from 'public/pictures/food.jpg'
-import fun from 'public/pictures/fun.jpg'
-import movies from 'public/pictures/movies.jpg'
-import son from 'public/pictures/son.jpg'
-import us from 'public/pictures/us.jpg'
+import family from '../../../public/pictures/family.jpg'
+import food from '../../../public/pictures/food.jpg'
+import fun from '../../../public/pictures/fun.jpg'
+import movies from '../../../public/pictures/movies.jpg'
+import son from '../../../public/pictures/son.jpg'
+import us from '../../../public/pictures/us.jpg'
 
-import Gallery from '../gallery/galery'
-import Picture from '../gallery/picture'
+import Gallery from '../../components/gallery/galery'
+import Picture from '../../components/gallery/picture'
 
 export default function FamilyGallery() {
   return (

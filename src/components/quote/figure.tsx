@@ -4,9 +4,9 @@ import classNames from 'classnames'
 import Image from 'next/image'
 import { RefObject } from 'react'
 
-import cap from '/public/images/cap.png'
-import fett from '/public/images/fett.png'
-import glasses from '/public/images/glasses.png'
+import cap from '../../../public/images/cap.png'
+import fett from '../../../public/images/fett.png'
+import glasses from '../../../public/images/glasses.png'
 import useViewportObserver from '@/hooks/use-viewport-observer'
 
 import styles from './styles.module.css'

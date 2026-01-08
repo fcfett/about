@@ -1,14 +1,14 @@
 import { DateTime } from 'luxon'
 
-import ac from '/public/companies/ac.jpg'
-import adp from '/public/companies/adp.jpg'
-import agi from '/public/companies/agi.jpg'
-import lol from '/public/companies/lol.jpg'
-import ls from '/public/companies/ls.jpg'
-import nt from '/public/companies/nt.jpg'
-import stefanini from '/public/companies/stefanini.jpg'
-import vg8 from '/public/companies/vg8.jpg'
-import PdfDownload from '/public/icons/pdf-download.svg'
+import ac from '../../../public/companies/ac.jpg'
+import adp from '../../../public/companies/adp.jpg'
+import agi from '../../../public/companies/agi.jpg'
+import lol from '../../../public/companies/lol.jpg'
+import ls from '../../../public/companies/ls.jpg'
+import nt from '../../../public/companies/nt.jpg'
+import stefanini from '../../../public/companies/stefanini.jpg'
+import vg8 from '../../../public/companies/vg8.jpg'
+import PdfDownload from '../../../public/icons/pdf-download.svg'
 import RoundFrameImage from '@/components/round-framed-image'
 
 const WORKING_EXPERIENCES = [

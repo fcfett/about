@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 
-import ArrowDown from '/public/icons/arrow-down.svg'
+import ArrowDown from '../../../public/icons/arrow-down.svg'
 
 import RoundFrameImage from '../round-framed-image'
 import FocusableAnchor from './focusable-anchor'

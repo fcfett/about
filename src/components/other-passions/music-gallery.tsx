@@ -1,10 +1,10 @@
-import alldaylong from '/public/pictures/alldaylong.jpg'
-import band from '/public/pictures/band.jpg'
-import playtogether from '/public/pictures/playtogether.jpg'
-import shows from '/public/pictures/shows.jpg'
+import alldaylong from '../../../public/pictures/alldaylong.jpg'
+import band from '../../../public/pictures/band.jpg'
+import playtogether from '../../../public/pictures/playtogether.jpg'
+import shows from '../../../public/pictures/shows.jpg'
 
-import Gallery from '../gallery/galery'
-import Picture from '../gallery/picture'
+import Gallery from '../../components/gallery/galery'
+import Picture from '../../components/gallery/picture'
 
 export default function MusicGallery() {
   return (

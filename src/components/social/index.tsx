@@ -1,10 +1,10 @@
 import { FC, HTMLProps } from 'react'
 
-import CodePenIcon from '/public/icons/codepen.svg'
-//import FacebookIcon from '/public/icons/facebook.svg'
-import GitHubIcon from '/public/icons/github.svg'
-import InstagramIcon from '/public/icons/instagram.svg'
-import LinkedInIcon from '/public/icons/linkedin.svg'
+import CodePenIcon from '../../../public/icons/codepen.svg'
+//import FacebookIcon from '../../../public/icons/facebook.svg'
+import GitHubIcon from '../../../public/icons/github.svg'
+import InstagramIcon from '../../../public/icons/instagram.svg'
+import LinkedInIcon from '../../../public/icons/linkedin.svg'
 
 type Icon = FC<HTMLProps<HTMLImageElement>>
 

@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { twMerge } from 'tailwind-merge'
 
-import ChevronDown from '/public/icons/chevron-down.svg'
+import ChevronDown from '../../../public/icons/chevron-down.svg'
 
 type Props = Partial<HTMLAnchorElement> & {
   isUpwards?: boolean

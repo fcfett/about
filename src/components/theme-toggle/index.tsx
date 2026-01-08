@@ -3,8 +3,8 @@
 import classNames from 'classnames'
 import { useState } from 'react'
 
-import MoonIcon from '/public/icons/moon.svg'
-import SunIcon from '/public/icons/sun.svg'
+import MoonIcon from '../../../public/icons/moon.svg'
+import SunIcon from '../../../public/icons/sun.svg'
 import {
   MEDIA_DARK,
   THEME_KEY,

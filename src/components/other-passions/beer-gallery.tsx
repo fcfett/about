@@ -1,10 +1,10 @@
-import bqc from '/public/pictures/bqc.jpg'
-import craft from '/public/pictures/craft.jpg'
-import festival from '/public/pictures/festival.jpg'
-import morebeer from '/public/pictures/morebeer.jpg'
+import bqc from '../../../public/pictures/bqc.jpg'
+import craft from '../../../public/pictures/craft.jpg'
+import festival from '../../../public/pictures/festival.jpg'
+import morebeer from '../../../public/pictures/morebeer.jpg'
 
-import Gallery from '../gallery/galery'
-import Picture from '../gallery/picture'
+import Gallery from '../../components/gallery/galery'
+import Picture from '../../components/gallery/picture'
 
 export default function BeerGallery() {
   return (

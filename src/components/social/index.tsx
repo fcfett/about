@@ -26,12 +26,12 @@ const LINKS: Link[] = [
     Icon: GitHubIcon,
   },
   {
-    url: 'https://codepen.io/fcfett/',
+    url: 'https://codepen.io/fcfett/pens/popular',
     name: 'CodePen',
     Icon: CodePenIcon,
   },
   {
-    url: 'https://instagram.com/fcfett/',
+    url: 'https://instagram.com/fcfett',
     name: 'Instagram',
     Icon: InstagramIcon,
   },

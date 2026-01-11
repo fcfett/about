@@ -12,7 +12,7 @@ export default function Hero() {
   const firstName = 'Felipe'
   const lastName = 'Fett'
   const generalistTitle = '{ Full Stack Software Engineer }'
-  const specialistText = '& Frontend Specialist'
+  const specialistText = 'Frontend Specialist & Tech Lead'
 
   const breakTextToSpans = (
     text: string,

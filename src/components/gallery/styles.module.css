@@ -13,6 +13,7 @@
 
 .image {
   @apply object-cover max-h-[33vmin];
+  color: #000 !important; /* TODO: For some reason Next Image is setting transparent to element color */
 }
 
 .caption {
